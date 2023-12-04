@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
-const allProducts = ["Samsung", "IPhone", "Pixel"]
+const allProducts = ["Samsung Galaxy Fold 4", "Iphone 14 pro", "Pixel 5","MI notet 6","FireStick","OnePlus Nord"]
 
 const App = () => {
   const [cart, setCart] = useState([])
@@ -18,7 +18,7 @@ const App = () => {
         <h3>List of Products</h3>
         {
           allProducts.map(item => (
-            <div>
+            <div className="item">
               <p>{item}</p>
               <button onClick={() => handleAddToCart(item)} >Add Item</button>
             </div>
@@ -29,7 +29,7 @@ const App = () => {
         <h3>Cart</h3>
         {
           cart.length === 0 ? (
-            <p>There is no items in the cart</p>
+            <p>There are no items in the cart</p>
           )
             :
             (
